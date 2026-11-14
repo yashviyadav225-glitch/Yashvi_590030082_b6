@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int x = 25;
+    int *p = &x;
+    int **q = &p;
+
+    printf("Initial value of x = %d\n", x);
+    printf("Value using *p = %d\n", *p);
+    printf("Value using **q = %d\n", **q);
+
+    *p = 40;
+
+    printf("\nAfter *p = 40:\n");
+    printf("x = %d\n", x);
+    printf("*p = %d\n", *p);
+    printf("**q = %d\n", **q);
+
+    **q = 75;
+
+    printf("\nAfter **q = 75:\n");
+    printf("x = %d\n", x);
+    printf("*p = %d\n", *p);
+    printf("**q = %d\n", **q);
+
+    return 0;
+}
